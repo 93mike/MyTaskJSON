@@ -6,7 +6,7 @@ import readJSON.ReadJsonFile;
 public class JSONTest {
     ReadJsonFile jSon = new ReadJsonFile();
     @Test
-    public void checkChildCompanAmazon() {
+    public void checkChildCompanyAmazon() {
 
         ChildCompanies amazon = new ChildCompanies();
         amazon.setAddress("Amazon Address");
@@ -16,7 +16,7 @@ public class JSONTest {
     }
 
     @Test
-    public void checkChildCompanAliExpress() {
+    public void checkChildCompanyAliExpress() {
         ChildCompanies aliExpress = new ChildCompanies();
         aliExpress.setAddress("AliExpress Address");
         aliExpress.setState("China");
