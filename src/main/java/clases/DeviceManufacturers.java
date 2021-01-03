@@ -19,5 +19,4 @@ public class DeviceManufacturers {
     public void setCorrectedData(String correctedData) {
         this.correctedData = correctedData;
     }
-
 }

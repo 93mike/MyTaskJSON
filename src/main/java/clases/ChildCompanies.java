@@ -1,7 +1,5 @@
 package clases;
 
-import java.util.List;
-
 public class ChildCompanies {
     private String address;
     private String state;
@@ -31,16 +29,13 @@ public class ChildCompanies {
         return phone;
     }
 
-    public boolean equals(ChildCompanies obj) {
-        return (address.equals(obj.address)) && (state.equals(obj.state)) && phone.equals(obj.phone);
-    }
-
-    public boolean isChildCompanyInJSON(List<ChildCompanies> childCompany, ChildCompanies checkCompany){
-        for (ChildCompanies childCompanies:childCompany){
-            if (childCompanies.equals(checkCompany)){
-                return true;
-            }
-        }
-        return false;
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        ChildCompanies that = (ChildCompanies) o;
+        return address.equals(that.address) &&
+                state.equals(that.state) &&
+                phone.equals(that.phone);
     }
 }

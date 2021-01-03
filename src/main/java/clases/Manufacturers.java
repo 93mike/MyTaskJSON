@@ -57,4 +57,8 @@ public class Manufacturers {
     public void setChildCompanies(List<ChildCompanies> childCompanies) {
         this.childCompanies = childCompanies;
     }
+
+    public boolean isChildCompanyInBaseStructure(ChildCompanies child){
+        return childCompanies.contains(child);
+    }
 }

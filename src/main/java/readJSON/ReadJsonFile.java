@@ -1,18 +1,17 @@
 package readJSON;
 
-import clases.AllFilesFromJSON;
+import clases.BaseStructure;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import java.io.File;
 
 public class ReadJsonFile {
-    public AllFilesFromJSON getDateFromJSONFile() {
+    public BaseStructure getDateFromJSONFile() {
         ObjectMapper mapper = new ObjectMapper();
-        AllFilesFromJSON jSonJava = null;
+        BaseStructure jSonJava = null;
         try {
             File json = new File("./Task.json");
-            jSonJava  = mapper.readValue(json, AllFilesFromJSON.class);
-        }
-        catch (Exception e){
+            jSonJava  = mapper.readValue(json, BaseStructure.class);
+        } catch (Exception e) {
             e.printStackTrace();
         }
         return jSonJava;
